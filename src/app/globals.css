@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  /* Warna latar terang nuansa Madinah (krem/broken white) */
+  --color-madinah-light: #fdfaf5;
+  /* Warna aksen emas lembut */
+  --color-madinah-gold: #d4af37;
+  /* Biru tua hanya untuk aksen kecil */
+  --color-madinah-blue: #004a99;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
