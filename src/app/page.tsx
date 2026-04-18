@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
-import { Search, MapPin, MessageCircle, CheckCircle, Plus } from 'lucide-react';
+import { Search, MapPin, MessageCircle, CheckCircle, Plus } from 'lucide-center';
+import Link from 'next/link'; // Import Link untuk navigasi
 import { CATEGORIES, PRODUCTS } from '../constants';
 
 export default function MallDagangMadinah() {
@@ -68,45 +69,52 @@ export default function MallDagangMadinah() {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredProducts.map((item) => (
-            <div key={item.id} className="group bg-white rounded-2xl overflow-hidden border-2 border-gray-100 hover:border-black transition-all duration-300 flex flex-col">
+            <div key={item.id} className="group bg-white rounded-2xl overflow-hidden border-2 border-gray-100 hover:border-black transition-all duration-300 flex flex-col relative">
               
-              <div className="relative h-48 bg-gray-100">
-                <img 
-                  src={item.image} 
-                  alt={item.name} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                />
-                <div className="absolute top-3 left-3 px-3 py-1 bg-black text-white text-[10px] font-black uppercase rounded">
-                  {item.condition}
+              {/* Link Pembungkus untuk Halaman Detail */}
+              <Link href={`/product/${item.id}`} className="flex flex-col flex-1">
+                <div className="relative h-48 bg-gray-100">
+                  <img 
+                    src={item.image} 
+                    alt={item.name} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                  />
+                  <div className="absolute top-3 left-3 px-3 py-1 bg-black text-white text-[10px] font-black uppercase rounded">
+                    {item.condition}
+                  </div>
                 </div>
-              </div>
-              
-              <div className="p-5 flex-1 flex flex-col">
-                <div className="flex items-center gap-2 mb-2">
-                  {item.isVerified && (
-                    <span className="text-[10px] font-black text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-100 uppercase">Amanah</span>
-                  )}
-                  <span className="text-[10px] text-gray-500 font-bold uppercase">{item.category}</span>
-                </div>
-
-                <h3 className="font-bold text-black text-base line-clamp-2 mb-4 leading-tight uppercase group-hover:text-gray-700 transition">
-                  {item.name}
-                </h3>
-
-                <div className="mt-auto">
-                  <p className="text-black font-black text-xl mb-1">Rp {item.price}</p>
-                  <div className="flex items-center text-gray-600 text-[11px] font-bold mb-5">
-                    <MapPin size={14} className="mr-1" /> {item.location}
+                
+                <div className="p-5 flex-1 flex flex-col">
+                  <div className="flex items-center gap-2 mb-2">
+                    {item.isVerified && (
+                      <span className="text-[10px] font-black text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-100 uppercase">Amanah</span>
+                    )}
+                    <span className="text-[10px] text-gray-500 font-bold uppercase">{item.category}</span>
                   </div>
 
-                  <a 
-                    href={item.link ? item.link : `https://wa.me/${item.whatsapp || '6285256162879'}?text=Assalamu'alaikum, saya tertarik dengan ${item.name}`}
-                    target="_blank"
-                    className="flex items-center justify-center gap-2 bg-white border-2 border-black text-black py-3 rounded-xl font-black text-xs hover:bg-black hover:text-white transition-all shadow-md active:scale-95"
-                  >
-                    <MessageCircle size={18} /> {item.link ? "KUNJUNGI TOKO" : "HUBUNGI PENJUAL"}
-                  </a>
+                  <h3 className="font-bold text-black text-base line-clamp-2 mb-4 leading-tight uppercase group-hover:text-gray-700 transition">
+                    {item.name}
+                  </h3>
+
+                  <div className="mt-auto">
+                    <p className="text-black font-black text-xl mb-1">Rp {item.price}</p>
+                    <div className="flex items-center text-gray-600 text-[11px] font-bold mb-5">
+                      <MapPin size={14} className="mr-1" /> {item.location}
+                    </div>
+                  </div>
                 </div>
+              </Link>
+
+              {/* Tombol WhatsApp (Dipisah agar tidak bentrok dengan Link Detail) */}
+              <div className="px-5 pb-5">
+                <a 
+                  href={item.link ? item.link : `https://wa.me/${item.whatsapp || '6285256162879'}?text=Assalamu'alaikum, saya tertarik dengan ${item.name}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-white border-2 border-black text-black py-3 rounded-xl font-black text-xs hover:bg-black hover:text-white transition-all shadow-md active:scale-95 w-full"
+                >
+                  <MessageCircle size={18} /> {item.link ? "KUNJUNGI TOKO" : "HUBUNGI PENJUAL"}
+                </a>
               </div>
             </div>
           ))}
