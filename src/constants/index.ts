@@ -9,7 +9,7 @@ export const PRODUCTS = [
     location: "Kab. Bekasi",
     condition: "Bekas",
     isVerified: true,
-    description: "KM 50rb-an, Jok 2 baris, Pajak 07-2025, Bebas laka/banjir, Sudah pakai peredam, Surat komplit, jual cepat aja, minat k rumah sj nego langsung, cocok angkut, lokasi kab. bekasi.",
+    description: "KM 50rb-an, jok 2 baris, pajak 07-2025, bebas laka/banjir, sudah pakai peredam, surat komplit, jual cepat aja, cocok angkut, lokasi Kab. Bekasi.",
     image: "/rasyid-mobil1-1.jpeg",
     images: [
       "/rasyid-mobil1-1.jpeg",
@@ -19,8 +19,8 @@ export const PRODUCTS = [
       "/rasyid-mobil1-5.jpeg",
       "/rasyid-mobil1-6.jpeg"
     ],
-    whatsapp: "6281235514724"
-  }, // Tadi di sini ada double }} yang bikin error
+    whatsapp: "6285256162879"
+  },
   {
     id: 2,
   name: "Sepeda Gunung GENIO & Sepeda Lipat ELEMENT - Kondisi Joss",
@@ -37,15 +37,37 @@ export const PRODUCTS = [
 },
   {
     id: 3,
-    name: "Dapur Mama Uwais",
-    price: "Mulai 12rb",
-    category: "Kuliner",
-    location: "Pebayuran",
-    condition: "Baru",
-    isVerified: true,
-    image: "/dapurmamauwais.png", 
-    link: "https://dapurmamauwais.kakalif.my.id"
-  },
+  name: "Toyota Rush 2012 - Tangan Pertama & Rawatan Pribadi",
+  price: "110.000.000 (Nego)",
+  category: "Mobil",
+  location: "Bekasi",
+  condition: "Bekas",
+  isVerified: true,
+  description: `Bismillah, bantu teman jual unit simpanan:
+  
+- Toyota Rush Tahun 2012
+- Surat-surat Lengkap (BPKB/STNK)
+- Pajak On / Hidup
+- Atas Nama Pribadi (Pemakaian Pribadi)
+- Kondisi Mobil Rawatan, Siap Pakai.
+
+Harga: 110 Juta (Masih bisa nego)
+
+Minat atau mau cek unit? Silakan hubungi kami`,
+  image: "/yunus-mobil1-1.jpeg",
+  images: [
+    "/yunus-mobil1-1.jpeg",
+    "/yunus-mobil1-2.jpeg",
+    "/yunus-mobil1-3.jpeg",
+    "/yunus-mobil1-4.jpeg",
+    "/yunus-mobil1-5.jpeg",
+    "/yunus-mobil1-6.jpeg",
+    "/yunus-mobil1-7.jpeg",
+    "/yunus-mobil1-8.jpeg",
+    "/yunus-mobil1-9.jpeg"
+  ],
+  whatsapp: "6285218686926" // Nomor Ustaz Yunus
+},
   {
     id: 4,
     name: "Jasa Pembuatan Website & Tutor Matematika",
