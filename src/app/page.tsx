@@ -16,7 +16,7 @@ export default function MallDagangMadinah() {
   return (
     <div className="bg-madinah-light min-h-screen pb-24 font-sans text-black">
       
-      {/* --- HERO SECTION (Background Terang) --- */}
+      {/* --- HERO SECTION --- */}
       <section className="bg-white border-b border-gray-200 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-black text-black mb-2 tracking-tighter uppercase italic">
@@ -62,7 +62,7 @@ export default function MallDagangMadinah() {
 
       {/* --- PRODUCT GRID --- */}
       <main className="max-w-6xl mx-auto px-4 mt-8">
-        <h2 className="text-3xl font-black text-black mb-8 border-l-8 border-madinah-gold pl-4 uppercase">
+        <h2 className="text-3xl font-black text-black mb-8 border-l-8 border-madinah-gold pl-4 uppercase tracking-tighter">
           {activeTab}
         </h2>
 
@@ -74,7 +74,7 @@ export default function MallDagangMadinah() {
                 <img 
                   src={item.image} 
                   alt={item.name} 
-                  className="w-full h-full object-cover" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                 />
                 <div className="absolute top-3 left-3 px-3 py-1 bg-black text-white text-[10px] font-black uppercase rounded">
                   {item.condition}
@@ -89,7 +89,7 @@ export default function MallDagangMadinah() {
                   <span className="text-[10px] text-gray-500 font-bold uppercase">{item.category}</span>
                 </div>
 
-                <h3 className="font-bold text-black text-base line-clamp-2 mb-4 leading-tight uppercase">
+                <h3 className="font-bold text-black text-base line-clamp-2 mb-4 leading-tight uppercase group-hover:text-gray-700 transition">
                   {item.name}
                 </h3>
 
@@ -100,11 +100,11 @@ export default function MallDagangMadinah() {
                   </div>
 
                   <a 
-                    href={`https://wa.me/628123456789?text=Assalamu'alaikum, tertarik dengan ${item.name}`}
+                    href={item.link ? item.link : `https://wa.me/${item.whatsapp || '6285256162879'}?text=Assalamu'alaikum, saya tertarik dengan ${item.name}`}
                     target="_blank"
-                    className="flex items-center justify-center gap-2 bg-white border-2 border-black text-black py-3 rounded-xl font-black text-xs hover:bg-black hover:text-white transition-all shadow-md"
+                    className="flex items-center justify-center gap-2 bg-white border-2 border-black text-black py-3 rounded-xl font-black text-xs hover:bg-black hover:text-white transition-all shadow-md active:scale-95"
                   >
-                    <MessageCircle size={18} /> HUBUNGI PENJUAL
+                    <MessageCircle size={18} /> {item.link ? "KUNJUNGI TOKO" : "HUBUNGI PENJUAL"}
                   </a>
                 </div>
               </div>
@@ -116,7 +116,7 @@ export default function MallDagangMadinah() {
       {/* --- FLOATING BUTTON --- */}
       <div className="fixed bottom-8 left-0 right-0 flex justify-center z-50 pointer-events-none">
         <a 
-          href="https://wa.me/628123456789"
+          href="https://wa.me/6285256162879?text=Assalamu'alaikum Kak Alif, saya mau titip jual barang di Mall Dagang"
           target="_blank"
           className="pointer-events-auto flex items-center gap-3 bg-madinah-gold text-white px-10 py-4.5 rounded-full shadow-2xl font-black text-lg transition-all hover:scale-110 border-4 border-white active:scale-95"
         >
