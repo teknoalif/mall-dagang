@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { Search, MapPin, MessageCircle, CheckCircle, Plus } from 'lucide-center';
+import { Search, MapPin, MessageCircle, CheckCircle, Plus } from 'lucide-react';
 import Link from 'next/link'; // Import Link untuk navigasi
 import { CATEGORIES, PRODUCTS } from '../constants';
 

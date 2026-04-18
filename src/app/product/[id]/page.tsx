@@ -2,7 +2,7 @@
 import React from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { ChevronLeft, MapPin, MessageCircle, CheckCircle } from 'lucide-react';
-import { PRODUCTS } from '@/constants';
+import { PRODUCTS } from '../../../constants';
 
 export default function ProductDetail() {
   const params = useParams();
