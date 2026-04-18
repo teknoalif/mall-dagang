@@ -9,7 +9,7 @@ export const PRODUCTS = [
     location: "Kab. Bekasi",
     condition: "Bekas",
     isVerified: true,
-    description: "KM 50rb-an, Jok 2 baris, Pajak 07-2025, Bebas laka/banjir, Sudah pakai peredam.",
+    description: "KM 50rb-an, Jok 2 baris, Pajak 07-2025, Bebas laka/banjir, Sudah pakai peredam, Surat komplit, jual cepat aja, minat k rumah sj nego langsung, cocok angkut, lokasi kab. bekasi.",
     image: "/rasyid-mobil1-1.jpeg", // Pastikan filenya .jpeg sesuai isi array images
     images: [
       "/rasyid-mobil1-1.jpeg",
