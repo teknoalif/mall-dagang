@@ -23,14 +23,18 @@ export const PRODUCTS = [
   }, // Tadi di sini ada double }} yang bikin error
   {
     id: 2,
-    name: "Kontrakan Rumah pak Kamal",
-    price: "1.200.000 / bln",
-    category: "Properti",
-    location: "Gang Mawar Jl. Raya Pebayuran",
-    condition: "Baru",
-    isVerified: true,
-    image: "/kontrakan.jpeg"
-  },
+  name: "Sepeda Gunung GENIO & Sepeda Lipat ELEMENT - Kondisi Joss",
+  price: "1.200.000",
+  category: "Barang Bekas",
+  location: "kec. Pebayuran",
+  condition: "Bekas",
+  isVerified: true,
+  description: "Bismillah, jual sepeda kesayangan dengan dudukan baru\n- Frame ringan\n- Gear lancar\n- Rem pakem\nCek video untuk detail suaranya.",
+  image: "/alif-sepeda-1-1.jpeg",
+  images: ["/alif-sepeda-1-1.jpeg", "/alif-sepeda-1-2.jpeg"],
+  videos: ["/alif-sepeda-1-v1.mp4", "/alif-sepeda-1-v2.mp4"], // Array video baru
+  whatsapp: "6285256162879"
+},
   {
     id: 3,
     name: "Dapur Mama Uwais",
