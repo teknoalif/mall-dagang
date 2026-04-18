@@ -16,12 +16,16 @@ export default function ProductDetail() {
   return (
     <div className="bg-madinah-light min-h-screen pb-20 font-sans text-black">
       {/* Header / Navigasi */}
-      <div className="bg-white p-4 border-b flex items-center gap-4 sticky top-0 z-50">
-        <button onClick={() => router.back()} className="p-2 hover:bg-gray-100 rounded-full">
-          <ChevronLeft size={24} />
-        </button>
-        <h1 className="font-black uppercase text-sm tracking-tighter">Detail Produk</h1>
-      </div>
+<div className="bg-white p-2 border-b flex items-center sticky top-0 z-[100] shadow-sm">
+  <button 
+    onClick={() => router.push('/')} // Menggunakan push ke root agar lebih pasti daripada back()
+    className="p-4 active:bg-gray-200 rounded-full flex items-center justify-center transition-colors"
+    aria-label="Kembali ke menu utama"
+  >
+    <ChevronLeft size={32} strokeWidth={2.5} className="text-black" />
+  </button>
+  <h1 className="font-black uppercase text-sm tracking-tighter ml-2">Detail Produk</h1>
+</div>
 
       <div className="max-w-4xl mx-auto mt-6 px-4">
         {/* --- HORIZONTAL SLIDER --- */}
